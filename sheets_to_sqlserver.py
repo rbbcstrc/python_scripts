@@ -31,6 +31,8 @@ SCOPES = 'https://www.googleapis.com/auth/spreadsheets.readonly'
 CLIENT_SECRET_FILE = 'client_secret.json'
 APPLICATION_NAME = 'Google Sheets API Python Quickstart'
 
+#this just cleans up the quotes and allows you to insert columns into sql that have a single quote in the data
+#i know this sucks
 def cleaner(stuff):
      writer =str(stuff).replace("[","").replace("]","").replace('"',"'")
      writer =writer.replace("'","''")
