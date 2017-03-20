@@ -83,7 +83,7 @@ def main():
     #you tell it which sheet to pull here. By default it uses the firstsheet sheets[0]
     sheet_metadata = service.spreadsheets().get(spreadsheetId=spreadsheetId).execute()
     sheets = sheet_metadata.get('sheets', '')
-    title = sheets[2].get("properties", {}).get("title")
+    title = sheets[0].get("properties", {}).get("title")
     
     #set the columns to read in this case it's the first 25
     rangeName=str(title)+"!A1:Y"
